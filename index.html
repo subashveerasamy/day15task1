@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <div>
+            <form >
+                <div class="flex-container">
+                    <h1 id="title">Calculator</h1>
+                    <div class="display">
+                        <input type="text" class="displayInput" id="result" name="display" value="">
+                    </div>
+                    <div>
+                        <button type="button"  value="C" onclick="display.value = '';clearBtn()" id="clear">C</button>
+                        <button type="button"  value="Del" onclick="display.value = display.value.toString().slice(0,-1) ">DEL</button>
+                        <button type="button"  value="." onclick="display.value += '.'">.</button>
+                        <button type="button"  value="*" onclick="display.value += '*';operatorsBtn()" id="mul">*</button>
+                    </div>
+                    <div>
+                        <button type="button"  value="7" onclick="display.value += '7'" id="7">7</button>
+                        <button type="button"  value="8" onclick="display.value += '8'" id="8">8</button>
+                        <button type="button"  value="9" onclick="display.value += '9'" id="9">9</button>
+                        <button type="button"  value="/" onclick="display.value += '/';operatorsBtn()" id="div">/</button>
+                    </div>
+                    <div>
+                        <button type="button"  value="4" onclick="display.value += '4'" id="4">4</button>
+                        <button type="button"  value="5" onclick="display.value += '5'" id="5">5</button>
+                        <button type="button"  value="6" onclick="display.value += '6'" id="6">6</button>
+                        <button type="button"  value="-" onclick="display.value += '-';operatorsBtn()" id="subtract">-</button>
+                    </div>
+                    <div>
+                        <button type="button"  value="1" onclick="display.value += '1'" id="1">1</button>
+                        <button type="button"  value="2" onclick="display.value += '2'" id="2">2</button>
+                        <button type="button"  value="3" onclick="display.value += '3'" id="3">3</button>
+                        <button type="button"  value="+" onclick="display.value += '+';operatorsBtn()" id="add" >+</button>
+                    </div>
+                    <div>
+                        <button type="button"  value="0" onclick="display.value += '0'">0</button>
+                        <button type="button"  value="00" onclick="display.value += '00'">00</button>
+                        <button type="button"  value="=" id="equal" onclick="display.value = `${calculation()}`">=</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+            <div>
+                <p id="description"><span style="color: rgb(241, 66, 66);">*Note : </span>You can! Do here basis Calculation</p>
+ 
+            </div>
+        </div>
+        
+        
+    </div>
+    <script src="https://app.zenclass.in/sheets/v1/js/zen/suite/bundle.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+</html>
